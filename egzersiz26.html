@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sayıların Toplamı</title>
+</head>
+<body>
+    <h1>Sayıların Toplamı</h1>
+
+    <input type="number" id="nInput">
+    <button onclick="toplamHesapla()">Hesapla</button>
+    <p id="sonuc"></p>
+
+    <script>
+        function toplamHesapla() {
+            var n = document.getElementById("nInput").value;
+
+            if (n !== "") {
+                n = Number(n);
+                var toplam = 0;
+
+                for (var i = 1; i <= n; i++) {
+                    toplam += i;
+                }
+
+                document.getElementById("sonuc").textContent = "1'den " + n + "'e kadar olan sayıların toplamı: " + toplam;
+            } else {
+                document.getElementById("sonuc").textContent = "Lütfen bir sayı girin.";
+            }
+        }
+    </script>
+</body>
+</html>
