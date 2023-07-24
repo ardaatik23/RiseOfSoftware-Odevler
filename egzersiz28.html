@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <div id="currentDate"></div>
+
+  <script>
+    // Mevcut tarihi al ve HTML dosyasına yazdır
+    function yazdirMevcutTarih() {
+      var currentDate = new Date();
+      var year = currentDate.getFullYear();
+      var month = currentDate.getMonth() + 1;
+      var day = currentDate.getDate();
+      var hours = currentDate.getHours();
+      var minutes = currentDate.getMinutes();
+      var seconds = currentDate.getSeconds();
+
+      var formattedDate = year + "-" + month + "-" + day + " " + hours + ":" + minutes + ":" + seconds;
+
+      document.getElementById("currentDate").textContent = formattedDate;
+    }
+
+    yazdirMevcutTarih();
+  </script>
+</body>
+</html>
