@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Çarpım Tablosu</title>
+</head>
+<body>
+    <h1>Çarpım Tablosu</h1>
+
+    <table id="carpimTablosu">
+        <thead>
+            <tr>
+                <th></th>
+                <th>8</th>
+                <th>9</th>
+                <th>10</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>8</th>
+                <td id="carpim88"></td>
+                <td id="carpim89"></td>
+                <td id="carpim810"></td>
+            </tr>
+            <tr>
+                <th>9</th>
+                <td id="carpim98"></td>
+                <td id="carpim99"></td>
+                <td id="carpim910"></td>
+            </tr>
+            <tr>
+                <th>10</th>
+                <td id="carpim108"></td>
+                <td id="carpim109"></td>
+                <td id="carpim1010"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+        // Çarpım tablosunu hesapla ve yazdır
+        function carpimTablosunuYazdir() {
+            var carpanlar = [8, 9, 10];
+
+            for (var i = 0; i < carpanlar.length; i++) {
+                for (var j = 0; j < carpanlar.length; j++) {
+                    var carpan1 = carpanlar[i];
+                    var carpan2 = carpanlar[j];
+                    var carpim = carpan1 * carpan2;
+
+                    var cellId = "carpim" + carpan1 + carpan2;
+                    document.getElementById(cellId).textContent = carpim;
+                }
+            }
+        }
+
+        carpimTablosunuYazdir();
+    </script>
+</body>
+</html>
