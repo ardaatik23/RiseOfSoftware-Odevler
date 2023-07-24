@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Toplama İşlemi</title>
+</head>
+<body>
+    <h1>Toplama İşlemi</h1>
+
+    <input type="number" id="sayi1Input">
+    <input type="number" id="sayi2Input">
+    <button onclick="toplamaHesapla()">Toplama</button>
+    <p id="sonuc"></p>
+
+    <script>
+        function toplamaHesapla() {
+            var sayi1 = document.getElementById("sayi1Input").value;
+            var sayi2 = document.getElementById("sayi2Input").value;
+
+            if (sayi1 !== "" && sayi2 !== "") {
+                var toplam = Number(sayi1) + Number(sayi2);
+                document.getElementById("sonuc").textContent = "Sonuç: " + toplam;
+            } else {
+                document.getElementById("sonuc").textContent = "Lütfen iki sayı girin.";
+            }
+        }
+    </script>
+</body>
+</html>
